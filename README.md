@@ -1,4 +1,4 @@
-# Joestar Theme
+# ★ Joestar Theme
 **JJBA** inspired [Starship](https://starship.rs/) prompt and color theme for [Windows Terminal](https://github.com/microsoft/terminal) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
 
 ![Screenshot 1](./screenshot1.png)
