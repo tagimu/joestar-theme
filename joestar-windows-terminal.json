@@ -1,0 +1,23 @@
+{
+    "name": "Joestar",
+    "brightBlack": "#847CA8",
+    "brightBlue": "#9387E5",
+    "brightCyan": "#1CF4FF",
+    "brightGreen": "#29FFA5",
+    "brightPurple": "#FFC046",
+    "brightRed": "#ED2285",
+    "brightWhite": "#E7ECF2",
+    "brightYellow": "#DC8AF0",
+    "cursorColor": "#B71BF5",
+    "blue": "#786EC9",
+    "black": "#726D8F",
+    "cyan": "#33E5E5",
+    "green": "#3AEB94",
+    "purple": "#FFD75D",
+    "red": "#C42572",
+    "white": "#DCE5EB",
+    "yellow": "#DC8DF5",
+    "background": "#26262E",
+    "foreground": "#DCE5EB",
+    "selectionBackground": "#E882F0"
+}
