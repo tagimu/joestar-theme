@@ -1,0 +1,99 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+[](color_violet)[★ ](color_yellow)$username$hostname[:](color_violet)\
+$directory\
+$git_branch$git_status\
+$fill$sudo$golang$nodejs[󰣑 ](color_vioblack)$time
+[](color_violet)$character"""
+
+palette = 'joestar'
+
+[palettes.joestar]
+color_vioblack = '60'
+color_violet = '61'
+color_pink = '125'
+color_green = '43'
+color_purple = '176'
+color_blue = '51'
+color_yellow = '220'
+color_white = '#DCE5EB'
+# Applications colors
+color_node = '78'
+color_go = '86'
+
+
+[character]
+success_symbol = '[](color_violet)[](color_yellow)'
+error_symbol = '[](color_violet)[](color_pink)'
+
+[fill]
+symbol = ' '
+
+[username]
+style_user = 'color_violet'
+style_root = 'color_vioblack'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = true
+format = '[@$hostname](color_violet)'
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = '󰘍 …/'
+home_symbol = '~'
+read_only_style = 'color_pink'
+read_only = '  '
+format = ' [$path](color_purple)[$read_only]($read_only_style) '
+
+[time]
+style = 'color_vioblack'
+time_format = '%H:%M'
+format = '[$time]($style)'
+disabled = false
+
+[git_branch]
+symbol = ' '
+format = '[∷ $symbol$branch]($style)'
+truncation_symbol = '…/'
+style = 'color_yellow'
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'color_yellow'
+conflicted = ' † '
+up_to_date = ''
+untracked = '++${count}'
+ahead = ' ⇡${count}'
+diverged = ''
+behind = ' ⇣${count}'
+stashed = ' ^ '
+modified = '  ${count}'
+staged = '  $count'
+renamed = ''
+deleted = '  $count'
+
+[sudo]
+symbol = ''
+style = 'color_yellow'
+format = '[$symbol ]($style)'
+disabled = false
+
+# ---
+
+[nodejs]
+symbol = ''
+style = 'color_node'
+not_capable_style = 'color_pink'
+format = '[$symbol ($version)]($style) '
+disabled = false
+
+[golang]
+symbol = ''
+style = 'color_go'
+format = '[$symbol ($version)]($style) '
+disabled = false

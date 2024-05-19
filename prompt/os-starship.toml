@@ -1,0 +1,108 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+[╭─](color_violet)$os$username$hostname[  ](color_violet)\
+$directory\
+$git_branch$git_status\
+$fill$sudo$golang$nodejs[󰣑 ](color_vioblack)$time
+[╰](color_violet)$character"""
+
+palette = 'joestar'
+
+[palettes.joestar]
+color_vioblack = '#726D8F'
+color_violet = '#786EC9'
+color_pink = '#C42572'
+color_green = '#3AEB94'
+color_purple = '#DC8DF5'
+color_blue = '#33E5E5'
+color_yellow = '#FFD75D'
+color_white = '#DCE5EB'
+# Applications colors
+color_node = '#23AD5D'
+color_go = '#19C4D1'
+
+
+[character]
+success_symbol = '[](color_violet)[](color_yellow)'
+error_symbol = '[](color_violet)[](color_pink)'
+
+[fill]
+symbol = ' '
+
+[os]
+format = '[$symbol](color_violet) '
+disabled = false
+
+[os.symbols]
+Windows = ''
+Ubuntu = ''
+Macos = ''
+
+[username]
+style_user = 'color_violet'
+style_root = 'color_vioblack'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = true
+format = '[@$hostname](color_violet)'
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = '󰘍 …/'
+home_symbol = '~'
+read_only_style = 'color_pink'
+read_only = '  '
+format = ' [$path](color_purple)[$read_only]($read_only_style) '
+
+[time]
+style = 'color_vioblack'
+time_format = '%H:%M'
+format = '[$time]($style)'
+disabled = false
+
+[git_branch]
+symbol = ' '
+format = '[∷ $symbol$branch]($style)'
+truncation_symbol = '…/'
+style = 'color_yellow'
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'color_yellow'
+conflicted = ' † '
+up_to_date = ''
+untracked = '++${count}'
+ahead = ' ⇡${count}'
+diverged = ''
+behind = ' ⇣${count}'
+stashed = ' ^ '
+modified = '  ${count}'
+staged = '  $count'
+renamed = ''
+deleted = '  $count'
+
+[sudo]
+symbol = ''
+style = 'color_yellow'
+format = '[$symbol ]($style)'
+disabled = false
+
+# ---
+
+[nodejs]
+symbol = ''
+style = 'color_node'
+not_capable_style = 'color_pink'
+format = '[$symbol ($version)]($style) '
+disabled = false
+
+[golang]
+symbol = ''
+style = 'color_go'
+format = '[$symbol ($version)]($style) '
+disabled = false

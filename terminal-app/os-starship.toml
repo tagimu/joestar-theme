@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """\
-[╭─](color_violet)$os $username$hostname[  ](color_violet)\
+[╭─](color_violet)$os$username$hostname[  ](color_violet)\
 $directory\
 $git_branch$git_status\
 $fill$sudo$golang$nodejs[󰣑 ](color_vioblack)$time
@@ -10,22 +10,22 @@ $fill$sudo$golang$nodejs[󰣑 ](color_vioblack)$time
 palette = 'joestar'
 
 [palettes.joestar]
-color_vioblack = '#726D8F'
-color_violet = '#786EC9'
-color_pink = '#C42572'
-color_green = '#3AEB94'
-color_purple = '#DC8DF5'
-color_blue = '#33E5E5'
-color_yellow = '#FFD75D'
+color_vioblack = '60'
+color_violet = '61'
+color_pink = '125'
+color_green = '43'
+color_purple = '176'
+color_blue = '51'
+color_yellow = '220'
 color_white = '#DCE5EB'
 # Applications colors
-color_node = '#23AD5D'
-color_go = '#19C4D1'
+color_node = '78'
+color_go = '86'
 
 
 [character]
-success_symbol = '[](color_violet)[](color_yellow) '
-error_symbol = '[](color_violet)[](color_pink) '
+success_symbol = '[](color_violet)[](color_yellow)'
+error_symbol = '[](color_violet)[](color_pink)'
 
 [fill]
 symbol = ' '
@@ -53,7 +53,7 @@ disabled = false
 
 [directory]
 truncation_length = 3
-truncation_symbol = '…/'
+truncation_symbol = '󰘍 …/'
 home_symbol = '~'
 read_only_style = 'color_pink'
 read_only = '  '
